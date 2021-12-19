@@ -9,6 +9,10 @@ body{
     font-family: Poppins;
 
 }
+
+.leslogos::-webkit-scrollbar, .s3::-webkit-scrollbar{
+    width: 0;
+}
 nav{
     display: flex;
     justify-content:space-between;
@@ -56,7 +60,7 @@ header p{
 }
 header input{
     height: 35px;
-    width: 22%;
+    width: 24%;
     border-radius: 4px;
     border: none;
 }
@@ -112,8 +116,19 @@ main{
 .s1{
     display: flex;
     margin-top: 50px;
-    gap: 70px;
+    gap: 50px;
 }
+/* ================================= */
+.leftimage img{
+    max-width: 100%;
+}
+
+
+.rightimage img{
+    max-width: 100%;
+}
+
+/* =================================== */
 .middlecontent{
     display: flex;
     flex-direction: column;
@@ -123,7 +138,6 @@ main{
 .middlecontent h3{
     font-size: 35px;
     font-weight: 700;
-    margin-bottom: 30px;
 }
 .middlecontent h5{
     font-size: 18px ;
@@ -146,8 +160,8 @@ main{
     font-weight: bold;
     border-radius: 5px;
     margin: 40px auto 0 auto;
-    margin-top: 40px;
     font-size: 17px;
+    bottom: 0;
 }
 
 .s2{
@@ -182,6 +196,7 @@ main{
     font-size: 17px;
     justify-content: flex-start;
     align-items: center;
+    z-index: 100;
 }
 .googlebtn{
     height: 45px;
@@ -192,6 +207,7 @@ main{
     border-radius: 5px;
     padding: 10px 20px;
     font-weight: bold;
+    justify-content: center;
     
 }
 .googlebtn img{
@@ -216,6 +232,7 @@ footer{
     display: flex;
     gap: 15px;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .leftfoot{
     flex-basis: 45%;
@@ -234,4 +251,154 @@ footer{
 
 .fit{
     margin-top: 20px;
+}
+
+/* ============================ */
+.s3{
+    position: relative;
+    margin: 0 auto;
+    height:58vh ;
+    margin-bottom: 50px;
+    display: flex;
+}
+.s3 img{
+    position: absolute;
+}
+.s3 .img1{
+    top: 0;
+    left: 0;
+}
+.s3 .img3{
+    top: 0;
+    left: 30%;
+}
+.s3 .img2{
+    top: 0;
+    left: 51%;
+}
+.s3 .img4{
+    right: 23%;
+    bottom: 0;
+}
+.s3 .img6{
+    bottom: 0;
+    right: 0;
+}
+.s3 .img5{
+    top: 43%;
+    left: 5%;
+}
+.s3 .img7{
+    top: 0;
+    right: 0
+}
+
+
+/* ==================Responsive======================== */
+
+@media(max-width :1100px){
+    header{
+        overflow: hidden;
+        text-align: center;
+        padding:20px 10px;
+    }
+    header img{
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    header a{
+        margin: 0;
+    }
+    header input{
+        width: 55%;
+    }
+    .lesdeuxbarres{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    header p{
+        margin:  0 auto;
+        max-width: 700px;
+    }
+    .leftimage , .rightimage{
+        display: none;
+    }
+
+    .middlecontent{
+        color: white;
+        background: linear-gradient(rgba(0, 0, 0, 0.219) , rgba(22, 22, 22, 0.192)), url(./images/left-illustration.png);
+        background-size: cover;
+        text-align: left;
+        padding: 20px 60px;
+        border-radius: 8px;
+    }
+    .title1{
+        display: block;
+    }
+
+    .s2{
+        overflow: hidden;
+        text-align: center;
+        padding:20px 0;
+    }
+    .images2 img{
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .s2button{
+        justify-content: center;
+    }
+
+    footer{
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .rightfoot{
+        flex-basis: 100%;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .s3{
+        overflow: scroll;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .s3 img{
+        position: static;
+        display: inline;
+        width: 100%;
+        height: 100%;
+        margin: 0 10px;
+    }
+    
+}
+
+
+@media(max-width:500px){
+    header, main, footer{
+        width: 98%;
+        margin: 0 auto;
+    }
+    .middlecontent, footer{
+        padding: 20px;
+    }
+    .s2button{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .rightfoot{
+        flex-direction: column;
+    }
+
 }
