@@ -292,7 +292,42 @@ footer{
     top: 0;
     right: 0
 }
+/* =================================================================================================================
+=====================================================SIGNUP================================================================ */
+.signupform{
+    flex-basis: 35%;
+}
 
+.signupform h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signupform form{
+    display: flex;
+    flex-direction: column;
+
+}
+.signupform form input{
+    max-width: 150%;
+    height: 35px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+/* =================================================================================================================
+=====================================================login================================================================ */
+.signupform{
+    text-align: center;
+}
+.signupform a{
+    text-decoration: none;
+    color: rgb(2, 135, 224);
+    margin-bottom: 30px;
+    
+}
 
 /* ==================Responsive======================== */
 
@@ -381,6 +416,17 @@ footer{
         height: 100%;
         margin: 0 10px;
     }
+    /* ================== */
+
+    .leftimage img, .rightimage img{
+        display: none;
+    }
+    .signupform{
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
     
 }
 
@@ -402,3 +448,4 @@ footer{
     }
 
 }
+
